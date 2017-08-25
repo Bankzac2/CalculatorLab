@@ -40,7 +40,10 @@ namespace CPE200Lab1
                     }
                     break;
                 case "%":
-                    //your code here
+                    // TODO
+                    break;
+                case "sqrt":
+                    // TODO
                     break;
             }
             return "E";
