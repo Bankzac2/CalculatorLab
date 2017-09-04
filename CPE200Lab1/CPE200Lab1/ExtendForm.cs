@@ -14,11 +14,11 @@ namespace CPE200Lab1
     {
         private bool isNumberPart = false;
         private bool isContainDot = false;
-        private CalculatorEngine engine;
+        private RpnCalculatorEngine engine;
         public ExtendForm()
         {
             InitializeComponent();
-            engine = new CalculatorEngine();
+            engine = new RpnCalculatorEngine();
         }
 
         private string getLastInString(string str)
@@ -105,6 +105,7 @@ namespace CPE200Lab1
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
+            engine.testStackMethod();
             string current = lblDisplay.Text;
             string[] parts = current.Split(' ');
             if(!(isNumber(parts[0]) && isOperator(parts[1]) && isNumber(parts[2])))
